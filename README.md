@@ -8,7 +8,7 @@ node-gol
     <li><p>To run the code, you can do <pre>npm start</pre></p></li>
     <li><p>If you want to run the tests, you can do <pre>npm install</pre><pre>npm test</pre></p></li>
   </ol>
-<h3>GoL Options</h3>
+<h3>GoL Constructor</h3>
 <h4>space</h4>
 <p>Default to 32, but basically defines the space inside a universe object, total of spaces on universe would be spaces x spaces, example if space were 32, total spaces would be <strong>1024</strong></p>
 <h4>cells</h4>
