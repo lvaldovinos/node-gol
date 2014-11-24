@@ -7,6 +7,7 @@ function Gol ( spec ) {
 	var cells = spec.cells;
 	var maxTicks = spec.maxTicks;
 	var tickFrecuency = spec.tickFrecuency * 1000;
+	var output = spec.output;
 	//create universe based on @space 
 	var universeModel = new Universe({ space : space });
 	var universe = universeModel.createUniverse();
@@ -52,7 +53,7 @@ function Gol ( spec ) {
 		'use strict';
 		//show first feed in the universe
 		console.log('First feed on universe');
-		universe.pretty();
+		universe[output]();
 		var generations = 0;
 		//apply GoL rules to the next @maxTicks generations every @tickFrecuency seconds
 		var intervalObj = setInterval(function () {
@@ -91,7 +92,7 @@ function Gol ( spec ) {
 			}
 			//apply next generation changes
 			this.applyChanges(changesNextGen);
-			universe.pretty();
+			universe[output]();
 
 			if ( generations === maxTicks ) {
 				console.log('Done!');
