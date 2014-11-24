@@ -1,4 +1,4 @@
-var Gol = require('./../gol');
+var Gol = require('./gol');
 var gol = new Gol({ space : 32,
 					cells : 'auto',
 					maxTicks : 10,
